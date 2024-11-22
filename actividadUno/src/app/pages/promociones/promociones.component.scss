@@ -1,0 +1,113 @@
+// Variables
+$primary-color: #08396a;
+$secondary-color: #ffc107;
+$text-color: #333;
+$font-size: 16px;
+$padding: 20px;
+
+// Estilos base
+body {
+  font-family: Arial, sans-serif;
+  font-size: $font-size;
+  color: $text-color;
+  margin: 0;
+  padding: 0;
+}
+
+// Encabezado
+.header {
+  background-color: $primary-color;
+  padding: $padding;
+  color: white;
+
+  .main-nav {
+    ul {
+      list-style: none;
+      padding: 0;
+
+      li {
+        display: inline-block;
+        margin-right: 20px;
+        font-size: 1.3em;
+
+        a {
+          color: white;
+          text-decoration: none;
+
+          &:hover {
+            color: $secondary-color;
+          }
+        }
+      }
+    }
+  }
+}
+
+.contenedor-logo{
+    display: flex;
+  }
+
+  .logo-menu{
+    margin-left: 20px;
+  }
+// Sección Destinos Internacionales
+.destinos {
+  padding: $padding;
+  background-color: color.adjust($primary-color, $lightness: 50%);
+
+  h2 {
+    color: $secondary-color;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+  }
+
+  .destino {
+    background-color: white;
+    border: 1px solid color.adjust($primary-color, $lightness: -20%);
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+
+    h3 {
+      color: $primary-color;
+    }
+
+    p {
+      color: $secondary-color;
+      font-size: 1.2em;
+    }
+  }
+}
+
+// Footer con interpolación
+$footer-class: "contacto";
+.#{$footer-class} {
+  background-color: color.adjust($primary-color, $lightness: 50%);
+  padding: $padding;
+  color: white;
+  text-align: center;
+
+  p, ul {
+    margin: 0;
+    padding: 5px;
+  }
+
+  ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+
+    li {
+      margin: 0 10px;
+
+      a {
+        color: white;
+        text-decoration: none;
+
+        &:hover {
+          color: $secondary-color;
+        }
+      }
+    }
+  }
+}

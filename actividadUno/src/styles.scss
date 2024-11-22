@@ -1,0 +1,218 @@
+@use 'sass:color';
+
+// Variables
+$primary-color: #08396a;
+$secondary-color: #ffc107;
+$text-color: #333;
+$font-size: 16px;
+$padding: 20px;
+
+// Estilos base
+body {
+  font-family: Arial, sans-serif;
+  font-size: $font-size;
+  color: $text-color;
+  margin: 0;
+  padding: 0;
+}
+
+// Encabezado
+.header {
+  background-color: $primary-color;
+  padding: $padding;
+  color: white;
+
+  .main-nav {
+    ul {
+      list-style: none;
+      padding: 0;
+
+      li {
+        display: inline-block;
+        margin-right: 20px;
+        font-size: 1.3em;
+
+        a {
+          color: white;
+          text-decoration: none;
+
+          &:hover {
+            color: $secondary-color;
+
+          }
+        }
+      }
+    }
+  }
+}
+
+.contenedor-logo{
+  display: flex;
+}
+
+.logo-menu{
+  margin-left: 20px;
+}
+
+// Sección Destinos
+.destinos {
+  padding: $padding;
+  background-color: color.adjust($primary-color, $lightness: 50%);
+  width: 500px;
+  margin-left: 700px;
+  padding: 60px;
+
+  h2 {
+    color: $secondary-color;
+    font-size: 1.6em;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+
+  form {
+    div {
+      margin-bottom: 10px;
+
+      label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+      }
+
+      input {
+        padding: 10px;
+        width: 100%;
+        border: 1px solid color.adjust($primary-color, $lightness: -20%);
+        border-radius: 5px;
+      }
+
+      button {
+        padding: 10px 20px;
+        background-color: $secondary-color;
+        border: none;
+        border-radius: 5px;
+        color: white;
+        cursor: pointer;
+
+        &:hover {
+          background-color: color.scale($primary-color, $lightness: 10%);
+
+        }
+      }
+    }
+  }
+}
+
+.buscar-vuelos{
+  background-image: url(assets/cartagena.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+
+}
+
+// Sección Promociones
+.promociones {
+  padding: $padding;
+  background-color: color.adjust($primary-color, $lightness: 50%);
+
+
+
+  h2 {
+    color: $primary-color;
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 3em;
+  }
+
+  .promocion {
+    margin-bottom: 20px;
+    padding: 20px;
+    background-image: url(assets/b777.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 1px solid $primary-color;
+    border-radius: 5px;
+    width: 900px;
+
+    h3 {
+      color: $primary-color;
+      margin: 0;
+      font-size: 1.5em;
+    }
+
+    p {
+      color: $secondary-color;
+      font-size: 1.2em;
+    }
+  }
+}
+
+.contedenor-promociones{
+  display: flex;
+}
+
+.video{
+  margin-left: 200px;
+}
+// Footer con interpolación
+$footer-class: "contacto";
+.#{$footer-class} {
+  background-color: color.scale($primary-color, $lightness: -15%);
+
+  padding: $padding;
+  color: white;
+  text-align: center;
+
+  p, ul {
+    margin: 0;
+    padding: 5px;
+  }
+
+  ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+
+    li {
+      margin: 0 10px;
+
+      a {
+        color: white;
+        text-decoration: none;
+
+        &:hover {
+          color: $secondary-color;
+        }
+      }
+    }
+  }
+}
+
+
+ /* Estilos para el popup */
+ .popup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  border: 2px solid #333;
+  padding: 20px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+.popup button {
+  margin-top: 10px;
+  padding: 5px 10px;
+  background-color: #333;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+.popup button:hover {
+  background-color: #555;
+}

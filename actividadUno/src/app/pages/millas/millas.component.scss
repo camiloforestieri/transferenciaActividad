@@ -1,0 +1,118 @@
+// Variables
+$primary-color: #08396a;
+$secondary-color: #ffc107;
+$text-color: #333;
+$background-light: #f8f9fa;
+$padding: 20px;
+
+// Estilos base
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: $text-color;
+}
+
+// Header
+.header {
+    background-color: $primary-color;
+    padding: $padding;
+    color: white;
+
+    .main-nav {
+      ul {
+        list-style: none;
+        padding: 0;
+
+        li {
+          display: inline-block;
+          margin-right: 20px;
+          font-size: 1.3em;
+
+          a {
+            color: white;
+            text-decoration: none;
+
+            &:hover {
+              color: $secondary-color;
+
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .contenedor-logo{
+    display: flex;
+  }
+
+  .logo-menu{
+    margin-left: 20px;
+  }
+
+// Secciones
+section {
+  padding: $padding;
+  margin: 20px 0;
+
+  &.beneficios {
+    background-color: $background-light;
+  }
+
+  &.niveles {
+    background-color: lighten($primary-color, 40%);
+  }
+
+  &.inscripcion {
+    background-color: lighten($secondary-color, 40%);
+    text-align: center;
+
+    .btn-inscripcion {
+      background-color: $secondary-color;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+
+      &:hover {
+        background-color: darken($secondary-color, 10%);
+      }
+    }
+  }
+}
+
+// Footer
+$footer-class: "contacto";
+.#{$footer-class} {
+  background-color: darken($primary-color, 15%);
+  padding: $padding;
+  color: white;
+  text-align: center;
+
+  p, ul {
+    margin: 0;
+    padding: 5px;
+  }
+
+  ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+
+    li {
+      margin: 0 10px;
+
+      a {
+        color: white;
+        text-decoration: none;
+
+        &:hover {
+          color: $secondary-color;
+        }
+      }
+    }
+  }
+}
+
